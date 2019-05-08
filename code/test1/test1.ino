@@ -46,12 +46,12 @@ void setup() {
   Serial.begin(9600);
   
   // initialize outputs:
-  pinMode(AL, OUTPUT);
-  pinMode(AH, OUTPUT);
-  pinMode(BL, OUTPUT);
-  pinMode(BH, OUTPUT);
-  pinMode(CL, OUTPUT);
-  pinMode(CH, OUTPUT);
+  pinMode(AL, INPUT);
+  pinMode(AH, INPUT);
+  pinMode(BL, INPUT);
+  pinMode(BH, INPUT);
+  pinMode(CL, INPUT);
+  pinMode(CH, INPUT);
   
   // initialize inputs:
   pinMode(A, INPUT);
@@ -60,7 +60,7 @@ void setup() {
   
 }
 
-
+ 
 void loop() {
   // read the state of the pushbutton value:
   digitalWrite(AL, LOW);
@@ -69,49 +69,67 @@ void loop() {
   digitalWrite(BH, LOW);
   digitalWrite(CL, LOW);
   digitalWrite(CH, LOW);
+  
     while(1) { 
 
-      digitalWrite(AL, LOW);
+      //  PHASE 1
+
       digitalWrite(BH, LOW);  
-
-      pinMode(AL, INPUT);
       pinMode(BH, INPUT);
-
       pinMode(AH, OUTPUT);
-      pinMode(CL, OUTPUT);
-
       digitalWrite(AH, LOW);
       digitalWrite(CL, HIGH);
 
       delay(10);
-      
-      digitalWrite(AH, LOW);
-      digitalWrite(CL, LOW);
-      
-      pinMode(AH, INPUT);
-      pinMode(CL, INPUT);
-      
-      pinMode(BL, OUTPUT);
-      pinMode(CH, OUTPUT);
 
+      //  PHASE 2
+
+      digitalWrite(CL, LOW);
+      pinMode(CL, INPUT);
+      pinMode(BL, OUTPUT);
+      digitalWrite(AH, LOW);
+      digitalWrite(BL, HIGH);
+
+      delay(10);
+  
+      //  PHASE 3
+
+      digitalWrite(AH, LOW);
+      pinMode(AH, INPUT);
+      pinMode(CH, OUTPUT);
       digitalWrite(BL, HIGH);
       digitalWrite(CH, LOW);
 
       delay(10);
+    
+      //  PHASE 4
 
       digitalWrite(BL, LOW);
+      pinMode(BL, INPUT);
+      pinMode(AL, OUTPUT);
+      digitalWrite(AL, HIGH);
       digitalWrite(CH, LOW);
 
-      pinMode(BL, INPUT);
+      delay(10);
+      
+      //  PHASE 5
+
+      digitalWrite(CH, LOW);  
       pinMode(CH, INPUT);
-
-      pinMode(AL, OUTPUT);
       pinMode(BH, OUTPUT);
-
-      digitalWrite(AL, HIGH);
       digitalWrite(BH, LOW);
+      digitalWrite(AL, HIGH);
 
-      delay(10);     
-    
+      delay(10);
+      
+      //  PHASE 6
+
+      digitalWrite(AL, LOW);
+      pinMode(AL, INPUT);
+      pinMode(CL, OUTPUT);
+      digitalWrite(BH, LOW);
+      digitalWrite(CL, HIGH);
+
+      delay(10);
   }
 }
