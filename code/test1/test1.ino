@@ -80,7 +80,7 @@ void loop() {
       digitalWrite(AH, LOW);
       digitalWrite(CL, HIGH);
 
-      delay(10);
+      delay(.01);
 
       //  PHASE 2
 
@@ -90,7 +90,7 @@ void loop() {
       digitalWrite(AH, LOW);
       digitalWrite(BL, HIGH);
 
-      delay(10);
+      delay(.01);
   
       //  PHASE 3
 
@@ -110,7 +110,7 @@ void loop() {
       digitalWrite(AL, HIGH);
       digitalWrite(CH, LOW);
 
-      delay(10);
+      delay(.01);
       
       //  PHASE 5
 
@@ -120,7 +120,7 @@ void loop() {
       digitalWrite(BH, LOW);
       digitalWrite(AL, HIGH);
 
-      delay(10);
+      delay(.01);
       
       //  PHASE 6
 
@@ -130,6 +130,6 @@ void loop() {
       digitalWrite(BH, LOW);
       digitalWrite(CL, HIGH);
 
-      delay(10);
+      delay(.01);
   }
 }
