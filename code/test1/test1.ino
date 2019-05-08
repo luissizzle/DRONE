@@ -54,7 +54,6 @@ void setup() {
   pinMode(CH, OUTPUT);
   
   // initialize inputs:
-  pinMode(buttonPin, INPUT);
   pinMode(A, INPUT);
   pinMode(B, INPUT);
   pinMode(C, INPUT);
@@ -64,114 +63,55 @@ void setup() {
 
 void loop() {
   // read the state of the pushbutton value:
-  buttonState = digitalRead(buttonPin);
-
-  Serial.print("PRINT LINE 1\n");
-  Serial.println(AL);
-  Serial.println(AH);
-  Serial.println(BL);
-  Serial.println(BH);
-  Serial.println(CL);
-  Serial.println(CH);
-  Serial.println(A);
-  Serial.println(B);
-  Serial.println(C);
-
-  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
-  if (buttonState == HIGH) {
-  //  buttonflag = 1;
+  digitalWrite(AL, LOW);
+  digitalWrite(AH, LOW);
+  digitalWrite(BL, LOW);
+  digitalWrite(BH, LOW);
+  digitalWrite(CL, LOW);
+  digitalWrite(CH, LOW);
     while(1) { 
-//      if(A == HIGH & B == LOW & C == LOW){
-//        Serial.print("I AM IN STATE ONE\n");
-//      digitalWrite(AL, LOW);
-//      digitalWrite(AH, HIGH);
-//      digitalWrite(BL, LOW);
-//      digitalWrite(BH, LOW);
-//      digitalWrite(CL, HIGH);
-//      digitalWrite(CH, HIGH);
-//      delay(10);
-//      } 
-//      if(A == LOW & B == HIGH & C == LOW){
-//      Serial.print("I AM IN STATE TWO\n");
-//      digitalWrite(AL, HIGH);
-//      digitalWrite(AH, HIGH);
-//      digitalWrite(BL, LOW);
-//      digitalWrite(BH, HIGH);
-//      digitalWrite(CL, LOW);
-//      digitalWrite(CH, LOW);
-//      delay(10);
-//      } 
-//      if(A == LOW & B == LOW & C == HIGH){
-//      Serial.print("I AM IN STATE THREE\n");
-//      digitalWrite(AL, LOW);
-//      digitalWrite(AH, LOW);
-//      digitalWrite(BL, HIGH);
-//      digitalWrite(BH, HIGH);
-//      digitalWrite(CL, LOW);
-//      digitalWrite(CH, HIGH);
-//      delay(10);
-//      }else{
-  Serial.print("PRINT LINE 2\n");      
-  Serial.println(AL);
-  Serial.println(AH);
-  Serial.println(BL);
-  Serial.println(BH);
-  Serial.println(CL);
-  Serial.println(CH);
-  Serial.println(A);
-  Serial.println(B);
-  Serial.println(C);
-
 
       digitalWrite(AL, LOW);
+      digitalWrite(BH, LOW);  
+
+      pinMode(AL, INPUT);
+      pinMode(BH, INPUT);
+
+      pinMode(AH, OUTPUT);
+      pinMode(CL, OUTPUT);
+
       digitalWrite(AH, LOW);
-      digitalWrite(BL, HIGH);
-      digitalWrite(BH, HIGH);
-      digitalWrite(CL, LOW);
-      digitalWrite(CH, HIGH);
-
-      delay(10);
-Serial.print("PRINT LINE 3\n");
-      Serial.println(AL);
-  Serial.println(AH);
-  Serial.println(BL);
-  Serial.println(BH);
-  Serial.println(CL);
-  Serial.println(CH);
-  Serial.println(A);
-  Serial.println(B);
-  Serial.println(C);
-
-
-      digitalWrite(AL, LOW);
-      digitalWrite(AH, HIGH);
-      digitalWrite(BL, LOW);
-      digitalWrite(BH, LOW);
       digitalWrite(CL, HIGH);
-      digitalWrite(CH, HIGH);
 
       delay(10);
-Serial.print("PRINT LINE 4");
-      Serial.println(AL);
-  Serial.println(AH);
-  Serial.println(BL);
-  Serial.println(BH);
-  Serial.println(CL);
-  Serial.println(CH);
-  Serial.println(A);
-  Serial.println(B);
-  Serial.println(C);
-
-      digitalWrite(AL, HIGH);
-      digitalWrite(AH, HIGH);
-      digitalWrite(BL, LOW);
-      digitalWrite(BH, HIGH);
+      
+      digitalWrite(AH, LOW);
       digitalWrite(CL, LOW);
+      
+      pinMode(AH, INPUT);
+      pinMode(CL, INPUT);
+      
+      pinMode(BL, OUTPUT);
+      pinMode(CH, OUTPUT);
+
+      digitalWrite(BL, HIGH);
       digitalWrite(CH, LOW);
 
       delay(10);
-  //    }
-     
-    }
+
+      digitalWrite(BL, LOW);
+      digitalWrite(CH, LOW);
+
+      pinMode(BL, INPUT);
+      pinMode(CH, INPUT);
+
+      pinMode(AL, OUTPUT);
+      pinMode(BH, OUTPUT);
+
+      digitalWrite(AL, HIGH);
+      digitalWrite(BH, LOW);
+
+      delay(10);     
+    
   }
 }
