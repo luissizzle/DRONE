@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1557457511 source:c:\users\lfbar\documents\drone\code\pwm_avr_test2\fuse.c
+	<avr/io.h>
+
+1557469195 source:c:\users\lfbar\documents\drone\code\pwm_avr_test2\main.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	<util/delay.h>
+
