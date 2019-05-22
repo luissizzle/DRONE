@@ -1,0 +1,27 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L stm32:STM32F103R(C-D-E)Tx U1
+U 1 1 5CE48AD4
+P 8400 4950
+F 0 "U1" H 8400 7407 50  0000 C CNN
+F 1 "STM32F103R(C-D-E)Tx" H 8400 7316 50  0000 C CNN
+F 2 "Housings_QFP:LQFP-64_10x10mm_Pitch0.5mm" H 8400 7225 50  0000 C CIN
+F 3 "" H 8400 4950 50  0000 C CNN
+	1    8400 4950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
