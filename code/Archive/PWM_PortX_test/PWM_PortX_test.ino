@@ -106,7 +106,57 @@ void setup()
 
   while (1)
   {
+    /*
+    AL = PORTD3;
+    AH = PORTD5;
+    BL = PORTD6;
+    BH = PORTB1;
+    CL = PORTB2;
+    CH = PORTB3;
+    */
+    PORTB = 0b00000000;
+    DDRB = 0b00000000;
+    DDRD = 0b01100000;
+    PORTD = 0b01000000;
 
+    delay(.001);
+    
+    PORTD = 0b00000000;
+    DDRD = 0b00100000;
+    DDRB = 0b00000100;
+    PORTB = 0b00000100;
+
+    delay(.001);
+
+    PORTD = 0b00000000;
+    DDRD = 0b00000000;
+    DDRB = 0b00000110;
+    PORTB = 0b00000100;
+    delay(.001);
+
+    PORTB = 0b00000000;
+    DDRD = 0b00001000;
+    DDRB = 0b00000010;
+    PORTD = 0b00001000;
+
+    delay(.001);
+     
+    PORTD = 0b00000000;
+    DDRD = 0b00001000;
+    DDRB = 0b00001000;
+    PORTB = 0b00000000;
+    PORTD = 0b00001000;
+
+    delay(.001);
+    
+    PORTD = 0b00000000;
+    PORTB = 0b00000000;
+    DDRD = 0b01000000;
+    DDRB = 0b00001000;
+    PORTB = 0b00000000;
+    PORTD = 0b01000000;
+    
+    delay(.001);
   }
 }
 
@@ -123,19 +173,7 @@ void setupADC() // ANALOG INPUT 5 (A5)
 
   startConversion();
 }
-
-
-/*
-  DDRD = (1 << PORTD3); // PWM PIN 3, OC2B // doesnt work at all
-  DDRD = (1 << PORTD5); // PWM PIN 5, OC0B // very low signal, works but big peaks, not square wave
-  DDRD = (1 << PORTD6); // PWM PIN 6, OC0A // works fine
-  DDRB = (1 << PORTB1); // PWM PIN 9, OC1A // very low signal, works but big peaks, not square wave
-  DDRB = (1 << PORTB2); // PWM PIN 10, OC1B // very low signal, works but big peaks, not square wave
-  DDRB = (1 << PORTB3); // PWM PIN 11, OC2A // works fine
-*/
-
  
-
 ISR(TIMER0_OVF_vect)
 {
   OCR0B = dutyCycle2;
@@ -156,9 +194,9 @@ ISR(TIMER2_OVF_vect)
 
 ISR(ADC_vect)
 {
-  dutyCycle1 = ADC/4; // doesnt work at all
-  dutyCycle2 = ADC/4; // very low signal, works but big peaks, not square wave
-  dutyCycle3 = ADC/4; // works fine
+  dutyCycle1 = ADC/4; 
+  dutyCycle2 = ADC/4; 
+  dutyCycle3 = ADC/4; 
   dutyCycle4 = ADC/4;
   dutyCycle5 = ADC/4;
   dutyCycle6 = ADC/4;
