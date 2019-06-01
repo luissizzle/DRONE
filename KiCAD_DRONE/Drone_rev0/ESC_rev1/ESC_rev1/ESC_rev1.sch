@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ESC_rev1-cache
 EELAYER 26 0
 EELAYER END
 $Descr A3 16535 11693
@@ -79,23 +80,23 @@ Wire Wire Line
 $Comp
 L Device:C C1
 U 1 1 5CE9C21F
-P 5550 1750
-F 0 "C1" H 5435 1704 50  0000 R CNN
-F 1 "C" H 5435 1795 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5588 1600 50  0001 C CNN
-F 3 "~" H 5550 1750 50  0001 C CNN
-	1    5550 1750
-	-1   0    0    1   
+P 2900 1000
+F 0 "C1" H 2785 954 50  0000 R CNN
+F 1 "C" H 2785 1045 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2938 850 50  0001 C CNN
+F 3 "~" H 2900 1000 50  0001 C CNN
+	1    2900 1000
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5CE9C26C
-P 5550 1900
-F 0 "#PWR0101" H 5550 1650 50  0001 C CNN
-F 1 "GND" H 5555 1727 50  0000 C CNN
-F 2 "" H 5550 1900 50  0001 C CNN
-F 3 "" H 5550 1900 50  0001 C CNN
-	1    5550 1900
+P 3050 1000
+F 0 "#PWR0101" H 3050 750 50  0001 C CNN
+F 1 "GND" H 3055 827 50  0000 C CNN
+F 2 "" H 3050 1000 50  0001 C CNN
+F 3 "" H 3050 1000 50  0001 C CNN
+	1    3050 1000
 	1    0    0    -1  
 $EndComp
 Connection ~ 5800 4400
@@ -152,33 +153,26 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 5CE9CDD6
-P 4950 1700
-F 0 "J1" H 4870 1375 50  0000 C CNN
-F 1 "Conn_01x02" H 4870 1466 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4950 1700 50  0001 C CNN
-F 3 "~" H 4950 1700 50  0001 C CNN
-	1    4950 1700
+P 2550 1400
+F 0 "J1" H 2470 1075 50  0000 C CNN
+F 1 "Conn_01x02" H 2470 1166 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2550 1400 50  0001 C CNN
+F 3 "~" H 2550 1400 50  0001 C CNN
+	1    2550 1400
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5150 1600 5550 1600
 $Comp
 L power:GND #PWR0102
 U 1 1 5CE9CF4E
-P 5150 1700
-F 0 "#PWR0102" H 5150 1450 50  0001 C CNN
-F 1 "GND" H 5155 1527 50  0000 C CNN
-F 2 "" H 5150 1700 50  0001 C CNN
-F 3 "" H 5150 1700 50  0001 C CNN
-	1    5150 1700
+P 2750 1400
+F 0 "#PWR0102" H 2750 1150 50  0001 C CNN
+F 1 "GND" H 2755 1227 50  0000 C CNN
+F 2 "" H 2750 1400 50  0001 C CNN
+F 3 "" H 2750 1400 50  0001 C CNN
+	1    2750 1400
 	1    0    0    -1  
 $EndComp
-Text GLabel 5850 1600 2    50   Output ~ 0
-Vcc
-Wire Wire Line
-	5550 1600 5850 1600
-Connection ~ 5550 1600
-Text GLabel 5150 4150 0    50   Input ~ 0
+Text GLabel 2850 1300 2    50   Output ~ 0
 Vcc
 Text GLabel 6700 3400 0    50   Input ~ 0
 Vcc
@@ -497,18 +491,14 @@ Connection ~ 9400 5750
 Wire Wire Line
 	6700 5800 6700 6000
 Connection ~ 6700 5800
-Wire Wire Line
-	5800 4850 6400 4850
-Wire Wire Line
-	5800 4650 6400 4650
-Text GLabel 5450 2350 2    50   Output ~ 0
+Text GLabel 3000 1900 2    50   Output ~ 0
 AL
-Text GLabel 5450 2450 2    50   Output ~ 0
+Text GLabel 3000 2000 2    50   Output ~ 0
 BL
 Wire Wire Line
-	5200 2350 5450 2350
+	2750 1900 3000 1900
 Wire Wire Line
-	5200 2450 5450 2450
+	2750 2000 3000 2000
 $Comp
 L My_Schematics:LM27222 U2
 U 1 1 5CEAE469
@@ -557,16 +547,14 @@ Wire Wire Line
 	8500 5750 8800 5750
 Wire Wire Line
 	8800 5750 8800 5400
-Text GLabel 7850 5150 0    50   Input ~ 0
-Vcc
 Text GLabel 4900 4650 0    50   Input ~ 0
 AL
 Text GLabel 7650 5650 0    50   Input ~ 0
 BL
-Text GLabel 5450 2650 2    50   Output ~ 0
+Text GLabel 3000 2200 2    50   Output ~ 0
 AH
 Wire Wire Line
-	5200 2650 5450 2650
+	2750 2200 3000 2200
 Wire Wire Line
 	4900 4650 5150 4650
 Text GLabel 4900 4750 0    50   Input ~ 0
@@ -575,10 +563,10 @@ Wire Wire Line
 	4900 4750 5150 4750
 Wire Wire Line
 	7650 5650 7850 5650
-Text GLabel 5450 2750 2    50   Output ~ 0
+Text GLabel 3000 2300 2    50   Output ~ 0
 BH
 Wire Wire Line
-	5200 2750 5450 2750
+	2750 2300 3000 2300
 Text GLabel 7650 5750 0    50   Input ~ 0
 BH
 Wire Wire Line
@@ -594,13 +582,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 5650 8950 5650
 Wire Wire Line
-	8950 5650 8950 4250
-Wire Wire Line
-	8950 4250 9100 4250
-Wire Wire Line
 	9100 5850 9100 5450
-Wire Wire Line
-	8500 5850 9100 5850
 $Comp
 L My_Schematics:LM27222 U3
 U 1 1 5CEBF7F5
@@ -647,8 +629,6 @@ Wire Wire Line
 	11000 5400 11000 5550
 Wire Wire Line
 	11000 5750 11300 5750
-Text GLabel 10350 5150 0    50   Input ~ 0
-Vcc
 Text GLabel 10150 5650 0    50   Input ~ 0
 CL
 Wire Wire Line
@@ -672,70 +652,30 @@ Connection ~ 11900 4950
 Wire Wire Line
 	11900 4950 11900 5150
 Wire Wire Line
-	11450 5650 11450 4250
-Wire Wire Line
-	11450 4250 11600 4250
-Wire Wire Line
-	11000 5850 11600 5850
-Wire Wire Line
 	11600 5850 11600 5450
 Wire Wire Line
 	6400 4650 6400 4300
 Wire Wire Line
 	6400 4850 6400 5500
 Wire Wire Line
-	6700 4600 6700 5200
-Connection ~ 6100 4750
-$Comp
-L power:GND #PWR0109
-U 1 1 5CEDE9F5
-P 5150 4850
-F 0 "#PWR0109" H 5150 4600 50  0001 C CNN
-F 1 "GND" H 5155 4677 50  0000 C CNN
-F 2 "" H 5150 4850 50  0001 C CNN
-F 3 "" H 5150 4850 50  0001 C CNN
-	1    5150 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0110
-U 1 1 5CEDEAB4
-P 7850 5850
-F 0 "#PWR0110" H 7850 5600 50  0001 C CNN
-F 1 "GND" H 7855 5677 50  0000 C CNN
-F 2 "" H 7850 5850 50  0001 C CNN
-F 3 "" H 7850 5850 50  0001 C CNN
-	1    7850 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 5CEDEB03
-P 10350 5850
-F 0 "#PWR0111" H 10350 5600 50  0001 C CNN
-F 1 "GND" H 10355 5677 50  0000 C CNN
-F 2 "" H 10350 5850 50  0001 C CNN
-F 3 "" H 10350 5850 50  0001 C CNN
-	1    10350 5850
-	1    0    0    -1  
-$EndComp
-Text GLabel 5450 2850 2    50   Output ~ 0
+	6700 4600 6700 4750
+Text GLabel 3000 2400 2    50   Output ~ 0
 CH
-Text GLabel 5450 2550 2    50   Output ~ 0
+Text GLabel 3000 2100 2    50   Output ~ 0
 CL
 Wire Wire Line
-	5200 2550 5450 2550
+	2750 2100 3000 2100
 Wire Wire Line
-	5200 2850 5450 2850
+	2750 2400 3000 2400
 $Comp
 L Connector_Generic:Conn_01x06 J2
 U 1 1 5CEE7D4C
-P 5000 2650
-F 0 "J2" H 4920 2125 50  0000 C CNN
-F 1 "Conn_01x06" H 4920 2216 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 5000 2650 50  0001 C CNN
-F 3 "~" H 5000 2650 50  0001 C CNN
-	1    5000 2650
+P 2550 2200
+F 0 "J2" H 2470 1675 50  0000 C CNN
+F 1 "Conn_01x06" H 2470 1766 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2550 2200 50  0001 C CNN
+F 3 "~" H 2550 2200 50  0001 C CNN
+	1    2550 2200
 	-1   0    0    1   
 $EndComp
 NoConn ~ 13350 4650
@@ -745,24 +685,293 @@ Wire Wire Line
 Wire Wire Line
 	13050 4550 13350 4550
 Wire Wire Line
-	6100 4750 13050 4750
-Wire Wire Line
 	13200 4850 13200 4750
 Wire Wire Line
 	13200 4750 13350 4750
 Wire Wire Line
 	9400 4850 13200 4850
+Text GLabel 2950 2650 2    50   Output ~ 0
+VDD1
+Text GLabel 2950 2950 2    50   Output ~ 0
+VSS1
+Text GLabel 2950 3200 2    50   Output ~ 0
+VDD2
+Text GLabel 2950 3800 2    50   Output ~ 0
+VDD3
+Text GLabel 2950 3500 2    50   Output ~ 0
+VSS2
+Text GLabel 2950 4100 2    50   Output ~ 0
+VSS3
 Wire Wire Line
-	11900 4950 13350 4950
+	2750 1000 2750 1300
+Wire Wire Line
+	2750 1300 2850 1300
+Connection ~ 2750 1300
+Text GLabel 4850 4150 0    50   Input ~ 0
+VDD1
+Text GLabel 5150 4850 0    50   Input ~ 0
+VSS1
+Text GLabel 7550 5150 0    50   Input ~ 0
+VDD2
+Text GLabel 7850 5850 0    50   Input ~ 0
+VSS2
+Text GLabel 10050 5150 0    50   Input ~ 0
+VDD3
+Text GLabel 10350 5850 0    50   Input ~ 0
+VSS3
 $Comp
-L Connector_Generic:Conn_01x05 J3
-U 1 1 5CEFF3A6
-P 13550 4750
-F 0 "J3" H 13630 4792 50  0000 L CNN
-F 1 "Conn_01x05" H 13630 4701 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 13550 4750 50  0001 C CNN
-F 3 "~" H 13550 4750 50  0001 C CNN
-	1    13550 4750
+L Device:R R8
+U 1 1 5CF27302
+P 6200 4650
+F 0 "R8" H 6270 4696 50  0000 L CNN
+F 1 "R" H 6270 4605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6130 4650 50  0001 C CNN
+F 3 "~" H 6200 4650 50  0001 C CNN
+	1    6200 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 4650 6050 4650
+Wire Wire Line
+	6350 4650 6400 4650
+$Comp
+L Device:R R11
+U 1 1 5CF2C407
+P 8950 4250
+F 0 "R11" H 9020 4296 50  0000 L CNN
+F 1 "R" H 9020 4205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8880 4250 50  0001 C CNN
+F 3 "~" H 8950 4250 50  0001 C CNN
+	1    8950 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8950 5650 8950 4600
+Wire Wire Line
+	8950 4600 8800 4600
+Wire Wire Line
+	8800 4600 8800 4250
+$Comp
+L Device:R R9
+U 1 1 5CF2EEC9
+P 6250 4850
+F 0 "R9" H 6320 4896 50  0000 L CNN
+F 1 "R" H 6320 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6180 4850 50  0001 C CNN
+F 3 "~" H 6250 4850 50  0001 C CNN
+	1    6250 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 4850 6100 4850
+$Comp
+L Device:R R12
+U 1 1 5CF31953
+P 8950 5850
+F 0 "R12" H 9020 5896 50  0000 L CNN
+F 1 "R" H 9020 5805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8880 5850 50  0001 C CNN
+F 3 "~" H 8950 5850 50  0001 C CNN
+	1    8950 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8800 5850 8500 5850
+$Comp
+L Device:R R14
+U 1 1 5CF3443E
+P 11450 4250
+F 0 "R14" H 11520 4296 50  0000 L CNN
+F 1 "R" H 11520 4205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 11380 4250 50  0001 C CNN
+F 3 "~" H 11450 4250 50  0001 C CNN
+	1    11450 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5CF344EA
+P 11450 5850
+F 0 "R15" H 11520 5896 50  0000 L CNN
+F 1 "R" H 11520 5805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 11380 5850 50  0001 C CNN
+F 3 "~" H 11450 5850 50  0001 C CNN
+	1    11450 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11000 5850 11300 5850
+Wire Wire Line
+	11450 5650 11450 4600
+Wire Wire Line
+	11450 4600 11300 4600
+Wire Wire Line
+	11300 4600 11300 4250
+$Comp
+L Device:R R7
+U 1 1 5CF39893
+P 5000 4150
+F 0 "R7" H 5070 4196 50  0000 L CNN
+F 1 "R" H 5070 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4930 4150 50  0001 C CNN
+F 3 "~" H 5000 4150 50  0001 C CNN
+	1    5000 4150
+	0    1    1    0   
+$EndComp
+Connection ~ 5150 4150
+$Comp
+L Device:R R10
+U 1 1 5CF39B51
+P 7700 5150
+F 0 "R10" H 7770 5196 50  0000 L CNN
+F 1 "R" H 7770 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7630 5150 50  0001 C CNN
+F 3 "~" H 7700 5150 50  0001 C CNN
+	1    7700 5150
+	0    1    1    0   
+$EndComp
+Connection ~ 7850 5150
+$Comp
+L Device:R R13
+U 1 1 5CF39E50
+P 10200 5150
+F 0 "R13" H 10270 5196 50  0000 L CNN
+F 1 "R" H 10270 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10130 5150 50  0001 C CNN
+F 3 "~" H 10200 5150 50  0001 C CNN
+	1    10200 5150
+	0    1    1    0   
+$EndComp
+Connection ~ 10350 5150
+Wire Wire Line
+	6100 4750 6700 4750
+Connection ~ 6100 4750
+Connection ~ 6700 4750
+Wire Wire Line
+	6700 4750 6700 5200
+Wire Wire Line
+	6700 4750 13050 4750
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5CF405EC
+P 2550 2850
+F 0 "J4" H 2470 2525 50  0000 C CNN
+F 1 "Conn_01x02" H 2470 2616 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 2550 2850 50  0001 C CNN
+F 3 "~" H 2550 2850 50  0001 C CNN
+	1    2550 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5CF40662
+P 2550 3400
+F 0 "J5" H 2470 3075 50  0000 C CNN
+F 1 "Conn_01x02" H 2470 3166 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 2550 3400 50  0001 C CNN
+F 3 "~" H 2550 3400 50  0001 C CNN
+	1    2550 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5CF406D4
+P 2550 4000
+F 0 "J6" H 2470 3675 50  0000 C CNN
+F 1 "Conn_01x02" H 2470 3766 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 2550 4000 50  0001 C CNN
+F 3 "~" H 2550 4000 50  0001 C CNN
+	1    2550 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 5CF22688
+P 2850 2800
+F 0 "C14" H 2735 2754 50  0000 R CNN
+F 1 "C" H 2735 2845 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2888 2650 50  0001 C CNN
+F 3 "~" H 2850 2800 50  0001 C CNN
+	1    2850 2800
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2750 2750 2750 2650
+Wire Wire Line
+	2750 2650 2850 2650
+Wire Wire Line
+	2850 2650 2950 2650
+Connection ~ 2850 2650
+Wire Wire Line
+	2750 2850 2750 2950
+Wire Wire Line
+	2750 2950 2850 2950
+Connection ~ 2850 2950
+Wire Wire Line
+	2850 2950 2950 2950
+$Comp
+L Device:C C15
+U 1 1 5CF2E5DB
+P 2850 3350
+F 0 "C15" H 2735 3304 50  0000 R CNN
+F 1 "C" H 2735 3395 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2888 3200 50  0001 C CNN
+F 3 "~" H 2850 3350 50  0001 C CNN
+	1    2850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 5CF2E657
+P 2850 3950
+F 0 "C16" H 2735 3904 50  0000 R CNN
+F 1 "C" H 2735 3995 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2888 3800 50  0001 C CNN
+F 3 "~" H 2850 3950 50  0001 C CNN
+	1    2850 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3200 2850 3200
+Wire Wire Line
+	2750 3200 2750 3300
+Connection ~ 2850 3200
+Wire Wire Line
+	2850 3200 2750 3200
+Wire Wire Line
+	2950 3500 2850 3500
+Wire Wire Line
+	2750 3500 2750 3400
+Connection ~ 2850 3500
+Wire Wire Line
+	2850 3500 2750 3500
+Wire Wire Line
+	2950 3800 2850 3800
+Wire Wire Line
+	2750 3800 2750 3900
+Connection ~ 2850 3800
+Wire Wire Line
+	2850 3800 2750 3800
+Wire Wire Line
+	2750 4000 2750 4100
+Wire Wire Line
+	2750 4100 2850 4100
+Connection ~ 2850 4100
+Wire Wire Line
+	2850 4100 2950 4100
+$Comp
+L Connector_Generic:Conn_01x07 J3
+U 1 1 5CF3E0D3
+P 13550 4850
+F 0 "J3" H 13630 4892 50  0000 L CNN
+F 1 "Conn_01x07" H 13630 4801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 13550 4850 50  0001 C CNN
+F 3 "~" H 13550 4850 50  0001 C CNN
+	1    13550 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11900 4950 13350 4950
+NoConn ~ 13350 5050
+NoConn ~ 13350 5150
 $EndSCHEMATC
