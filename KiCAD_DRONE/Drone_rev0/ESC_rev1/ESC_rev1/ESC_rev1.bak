@@ -960,12 +960,12 @@ Connection ~ 2850 4100
 Wire Wire Line
 	2850 4100 2950 4100
 $Comp
-L Connector_Generic:Conn_01x07 J?
+L Connector_Generic:Conn_01x07 J3
 U 1 1 5CF3E0D3
 P 13550 4850
-F 0 "J?" H 13630 4892 50  0000 L CNN
+F 0 "J3" H 13630 4892 50  0000 L CNN
 F 1 "Conn_01x07" H 13630 4801 50  0000 L CNN
-F 2 "" H 13550 4850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 13550 4850 50  0001 C CNN
 F 3 "~" H 13550 4850 50  0001 C CNN
 	1    13550 4850
 	1    0    0    -1  
