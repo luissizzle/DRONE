@@ -491,14 +491,14 @@ Connection ~ 9400 5750
 Wire Wire Line
 	6700 5800 6700 6000
 Connection ~ 6700 5800
-Text GLabel 4100 4100 2    50   Output ~ 0
+Text GLabel 4100 3950 2    50   Output ~ 0
 AL
-Text GLabel 4100 4200 2    50   Output ~ 0
+Text GLabel 4100 4050 2    50   Output ~ 0
 BL
 Wire Wire Line
-	3850 4100 4100 4100
+	3850 3950 4100 3950
 Wire Wire Line
-	3850 4200 4100 4200
+	3850 4050 4100 4050
 $Comp
 L My_Schematics:LM27222 U2
 U 1 1 5CEAE469
@@ -551,10 +551,10 @@ Text GLabel 4900 4650 0    50   Input ~ 0
 AL
 Text GLabel 7650 5650 0    50   Input ~ 0
 BL
-Text GLabel 4100 4400 2    50   Output ~ 0
+Text GLabel 4100 4250 2    50   Output ~ 0
 AH
 Wire Wire Line
-	3850 4400 4100 4400
+	3850 4250 4100 4250
 Wire Wire Line
 	4900 4650 5150 4650
 Text GLabel 4900 4750 0    50   Input ~ 0
@@ -563,10 +563,10 @@ Wire Wire Line
 	4900 4750 5150 4750
 Wire Wire Line
 	7650 5650 7850 5650
-Text GLabel 4100 4500 2    50   Output ~ 0
+Text GLabel 4100 4350 2    50   Output ~ 0
 BH
 Wire Wire Line
-	3850 4500 4100 4500
+	3850 4350 4100 4350
 Text GLabel 7650 5750 0    50   Input ~ 0
 BH
 Wire Wire Line
@@ -659,25 +659,14 @@ Wire Wire Line
 	6400 4850 6400 5500
 Wire Wire Line
 	6700 4600 6700 4750
-Text GLabel 4100 4600 2    50   Output ~ 0
+Text GLabel 4100 4450 2    50   Output ~ 0
 CH
-Text GLabel 4100 4300 2    50   Output ~ 0
+Text GLabel 4100 4150 2    50   Output ~ 0
 CL
 Wire Wire Line
-	3850 4300 4100 4300
+	3850 4150 4100 4150
 Wire Wire Line
-	3850 4600 4100 4600
-$Comp
-L Connector_Generic:Conn_01x06 J2
-U 1 1 5CEE7D4C
-P 3650 4400
-F 0 "J2" H 3570 3875 50  0000 C CNN
-F 1 "Conn_01x06" H 3570 3966 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3650 4400 50  0001 C CNN
-F 3 "~" H 3650 4400 50  0001 C CNN
-	1    3650 4400
-	-1   0    0    1   
-$EndComp
+	3850 4450 4100 4450
 NoConn ~ 13350 4650
 NoConn ~ 13350 4850
 Wire Wire Line
@@ -698,10 +687,6 @@ Text GLabel 4050 5400 2    50   Output ~ 0
 VDD2
 Text GLabel 4050 6000 2    50   Output ~ 0
 VDD3
-Text GLabel 4050 5700 2    50   Output ~ 0
-VSS2
-Text GLabel 4050 6300 2    50   Output ~ 0
-VSS3
 Wire Wire Line
 	3850 3200 3850 3500
 Wire Wire Line
@@ -713,12 +698,8 @@ Text GLabel 5150 4850 0    50   Input ~ 0
 VSS1
 Text GLabel 7550 5150 0    50   Input ~ 0
 VDD2
-Text GLabel 7850 5850 0    50   Input ~ 0
-VSS2
 Text GLabel 10050 5150 0    50   Input ~ 0
 VDD3
-Text GLabel 10350 5850 0    50   Input ~ 0
-VSS3
 $Comp
 L Device:R R8
 U 1 1 5CF27302
@@ -974,4 +955,25 @@ Wire Wire Line
 	11900 4950 13350 4950
 NoConn ~ 13350 5050
 NoConn ~ 13350 5150
+$Comp
+L Connector_Generic:Conn_01x07 J2
+U 1 1 5D02E0AC
+P 3650 4250
+F 0 "J2" H 3570 3725 50  0000 C CNN
+F 1 "Conn_01x07" H 3570 3816 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B07B-EH-A_1x07_P2.50mm_Vertical" H 3650 4250 50  0001 C CNN
+F 3 "~" H 3650 4250 50  0001 C CNN
+	1    3650 4250
+	-1   0    0    1   
+$EndComp
+Text GLabel 3850 4550 2    50   Output ~ 0
+VSS1
+Text GLabel 4050 5700 2    50   Output ~ 0
+VSS1
+Text GLabel 4050 6300 2    50   Output ~ 0
+VSS1
+Text GLabel 7850 5850 0    50   Input ~ 0
+VSS1
+Text GLabel 10350 5850 0    50   Input ~ 0
+VSS1
 $EndSCHEMATC

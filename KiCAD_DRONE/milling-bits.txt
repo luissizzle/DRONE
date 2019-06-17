@@ -9,8 +9,9 @@ Life-to-date [mm]
 
 05/22/2019: 2340
 
-16mill end mill #1:
+16mill end mill #1:DEAD
 
+6/14/19: + 954 + 1680 = 6304
 6/4/19: 3670
 2/21/19: 3051
 2/22/19: 1634
@@ -21,3 +22,5 @@ Life-to-date [mm]
 10 mill end mill #2: 
 
 16mill end mill #2:
+
+6/14/19: 1680 + 954 2634
