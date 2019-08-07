@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L My_Schematics:LM27222 U1
+L ESC_rev1-rescue:LM27222-My_Schematics U1
 U 1 1 5CE9BBD8
 P 5250 4550
 F 0 "U1" H 5475 4775 50  0000 C CNN
@@ -207,7 +207,7 @@ L Device:C C13
 U 1 1 5CE9D228
 P 12250 3500
 F 0 "C13" H 12135 3454 50  0000 R CNN
-F 1 "100u" H 12135 3545 50  0000 R CNN
+F 1 "100n" H 12135 3545 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 12288 3350 50  0001 C CNN
 F 3 "~" H 12250 3500 50  0001 C CNN
 	1    12250 3500
@@ -500,7 +500,7 @@ Wire Wire Line
 Wire Wire Line
 	3850 4050 4100 4050
 $Comp
-L My_Schematics:LM27222 U2
+L ESC_rev1-rescue:LM27222-My_Schematics U2
 U 1 1 5CEAE469
 P 7950 5550
 F 0 "U2" H 8175 5775 50  0000 C CNN
@@ -584,7 +584,7 @@ Wire Wire Line
 Wire Wire Line
 	9100 5850 9100 5450
 $Comp
-L My_Schematics:LM27222 U3
+L ESC_rev1-rescue:LM27222-My_Schematics U3
 U 1 1 5CEBF7F5
 P 10450 5550
 F 0 "U3" H 10675 5775 50  0000 C CNN
